@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Javascript</title>
+</head>
+<body>
+    <h2>Hello World</h2>
+    <input type="number" id="first_input" value="number"><br>Enter first number</input><br><br>
+    <select id="sel_id">
+        <option value="+" >+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+
+    </select><br><br>
+    <input type="number" id="second_input" value="number"><br>Enter second number</input><br><br>
+
+    <button onclick="cal()">Calculate</button>
+    <input type="number" value="number" id="cal_id" placeholder="Your answer" readonly="">
+
+
+
+
+
+    
+
+</body>
+<script type="text/javascript">
+    function cal(){
+        var f1_num = document.getElementById("first_input").value;
+        var f2_num = document.getElementById("second_input").value;
+        var f3_num = document.getElementById("sel_id").value;
+        
+        if (f3_num == '+'){
+            var sum_num =  parseInt(f1_num) + parseInt(f2_num);
+            document.getElementById("cal_id").value = sum_num
+        }6
+    }
+
+</script>
+</html>

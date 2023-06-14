@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moving Box In Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <style>
+    .first_div {
+        background-color:red;
+        width:26rem;
+        height:26rem;
+        position: relative;
+    }
+    .second_div {
+        background-color:yellow;
+        width:3rem;
+        height:3rem;
+        position: absolute;
+    }
+  </style>
+  <body>
+    <button class="btn m-3 bg-primary" onclick="strt()">Left to Right</button>
+    <button class="btn m-3 bg-primary" onclick="btot()">Top to Bottom</button>
+  
+
+
+    <div class="first_div">
+        <div class="second_div" id="yellow_id">
+
+        </div>
+    </div>
+    <h4 id="err"></h4>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+  <script type="text/javascript">
+    var yellow = document.getElementById("yellow_id");
+        
+
+    function strt(){    
+        var poe = 0;
+        var intr = setInterval(anime,100);
+        function anime(){
+            if (poe==23){
+                clearInterval(intr);
+                
+            }else{
+                poe++;  
+                yellow.style.left = poe +"rem";
+                
+            }
+        }
+        
+    }
+    function btot(){
+      var intr2 = setInterval(anime2, 100);
+      var poe= 23;
+      function anime2(){
+        if (poe==0){
+          clearInterval(intr2);
+        }else{
+          poe--;
+          yellow.style.bottom = poe +"rem";        
+        }
+      }
+    }
+    
+
+
+  </script>
+</html>

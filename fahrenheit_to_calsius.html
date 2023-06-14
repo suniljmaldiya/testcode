@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pratice for javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container text-center col col-lg-6 mt-4">
+        <h4>Celsius to Fahrenheit (°C to °F)</h4>
+        <input type="number" id="in_1" placeholder="Calsius">
+        <button type="button" onclick="cal()">Convert</button>
+        <input type="number" id="in_2" placeholder="Fahrenheit" readonly="">
+    </div>
+    <div class="container text-center col col-lg-6 mt-4">
+        <h4>Fahrenheit to Celsius (°F to °C)</h4>
+        <input type="number" id="in_4" placeholder="Fahrenheit">
+        <button type="button" onclick="cal_1()">Convert</button>
+        <input type="number" id="in_5" placeholder="Calsius" readonly="">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+  <script>
+    function cal(){
+        var in_1 = document.getElementById("in_1").value
+        var in_2 = document.getElementById("in_2").value
+        
+        var in_3 = (in_1*1.8) + 32; 
+        document.getElementById("in_2").value = in_3 
+    }
+    function cal_1(){
+        var in_4 = document.getElementById("in_4").value
+        var in_5 = document.getElementById("in_5").value
+        
+        var in_6 = (in_4 - 32)*5/9 ; 
+        document.getElementById("in_5").value = in_6 ;
+    }
+
+  </script>
+</html>
